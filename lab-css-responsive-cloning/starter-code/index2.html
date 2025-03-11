@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Hunt Clone</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            margin: 0;
+            padding: 0;
+        }
+        .welcome-bar {
+            background: #ff6600;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            display: flex;
+            gap: 20px;
+        }
+        .main-content {
+            width: 70%;
+            background: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .sidebar {
+            width: 30%;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .widget {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .section-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .product {
+            display: flex;
+            align-items: center;
+            background: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+        .product img {
+            width: 50px;
+            height: 50px;
+            border-radius: 8px;
+            margin-right: 15px;
+        }
+        .product-info {
+            flex-grow: 1;
+        }
+        .product-title {
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .product-desc {
+            font-size: 14px;
+            color: #777;
+        }
+        .votes {
+            background: #eee;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+        .sidebar button {
+            background: #ff6600;
+            color: white;
+            padding: 10px;
+            border: none;
+            width: 100%;
+            font-size: 14px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .live-chats {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .chat {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .chat img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+        .chat-info {
+            flex-grow: 1;
+        }
+        .chat-name {
+            font-weight: bold;
+        }
+        .chat-desc {
+            font-size: 12px;
+            color: #777;
+        }
+        .remind-btn {
+            background: #ddd;
+            border: none;
+            padding: 5px 10px;
+            font-size: 12px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .see-more {
+            text-align: center;
+            margin-top: 10px;
+            font-size: 12px;
+            color: #ff6600;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="welcome-bar">Welcome to Product Hunt - Discover the best new products</div>
+    <div class="container">
+        <div class="main-content">
+            <div class="section-title">Popular this week</div>
+            <div class="product">
+                <img src="duolingo.png" alt="Duolingo Bots">
+                <div class="product-info">
+                    <div class="product-title">Duolingo Bots</div>
+                    <div class="product-desc">AI-powered characters to teach language conversation</div>
+                </div>
+                <div class="votes">1460</div>
+            </div>
+            <div class="product">
+                <img src="tribe.png" alt="Tribe 2.0">
+                <div class="product-info">
+                    <div class="product-title">Tribe 2.0</div>
+                    <div class="product-desc">Introducing Augmented Messaging</div>
+                </div>
+                <div class="votes">1465</div>
+            </div>
+        </div>
+        <div class="sidebar">
+            <div class="widget">
+                <div class="section-title">Kittybot for Slack</div>
+                <p>A friendly feline that sends you cool new things.</p>
+                <button>Add Kittybot to Slack</button>
+            </div>
+            <div class="widget">
+                <div class="section-title">Upcoming Live Chats</div>
+                <div class="live-chats">
+                    <div class="chat">
+                        <img src="adam.png" alt="Adam Besvinick">
+                        <div class="chat-info">
+                            <div class="chat-name">Adam Besvinick</div>
+                            <div class="chat-desc">VC at Deep Fork Capital</div>
+                        </div>
+                        <button class="remind-btn">REMIND ME</button>
+                    </div>
+                    <div class="chat">
+                        <img src="susan.png" alt="Susan David">
+                        <div class="chat-info">
+                            <div class="chat-name">Susan David</div>
+                            <div class="chat-desc">Author of Emotionally Guilty</div>
+                        </div>
+                        <button class="remind-btn">REMIND ME</button>
+                    </div>
+                </div>
+                <div class="see-more">SEE MORE</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

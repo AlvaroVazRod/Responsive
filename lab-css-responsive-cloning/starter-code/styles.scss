@@ -1,0 +1,241 @@
+// Variables
+$primary-color: #ff4500;
+$background-color: #ffffff;
+$background-color-back: rgb(248, 244, 244);
+$text-color: #9d9b9b;
+$white: #fff;
+$black: black;
+$border-radius: 5px;
+$shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+$background-cursor: rgb(227, 225, 225);
+
+// General Styles
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: $background-color-back;
+  color: $text-color;
+}
+
+// Header
+header {
+  background: $white;
+  padding-left: 10%;
+  padding-right: 10%;
+  box-shadow: $shadow;
+
+  .logo-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 20px;
+
+
+    input {
+      background-image: url('./images/search.png');
+      background-position: left center;
+      background-repeat: no-repeat;
+      background-size: 20px;
+      padding-left: 25px;
+      flex-grow: 1;
+      border: 1px solid #ddd;
+      color: $text-color;
+      outline: none;
+      height: 30px;
+    }
+
+    button {
+      color: $text-color;
+      border: none;
+      cursor: pointer;
+      border-radius: $border-radius;
+      background-color: white;
+    }
+
+    button:hover {
+      background-color: $background-cursor;
+      color: black;
+    }
+  }
+
+  .barraBusca {
+    display: flex;
+    border-top-style: outset;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 20px;
+
+    a {
+      font-size: 14px;
+      padding: 5px 10px;
+      color: $text-color;
+      text-decoration: none;
+      cursor: pointer;
+      height: 50px;
+      align-content: center;
+    }
+
+    a:hover {
+      background-color: $background-cursor;
+      color: black;
+    }
+
+    button {
+      color: $text-color;
+      border: none;
+      cursor: pointer;
+      border-radius: $border-radius;
+      background-color: white;
+    }
+
+    img {
+      height: 15px;
+      width: 15px;
+    }
+
+  }
+
+  img.logo {
+    width: 40px;
+  }
+}
+
+// Main
+main {
+  display: flex;
+  width: 80%;
+  margin: 20px auto;
+  gap: 20px;
+  color: $black;
+
+  .container {
+    width: 80%;
+    margin: 20px auto;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+
+    .titulo-popular {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .popular {
+      background: $background-color;
+      padding: 20px;
+      box-shadow: $shadow;
+
+
+
+
+      div.product {
+        display: flex;
+        align-items: center;
+        border-top-style: outset;
+        padding: 10px;
+        margin-bottom: 10px;
+        justify-content: space-between;
+
+
+
+        img {
+          width: 50px;
+          height: 50px;
+          border-radius: 8px;
+          margin-right: 15px;
+        }
+
+        .icon {
+          font-size: 24px;
+          margin-right: 15px;
+        }
+
+        .info {
+          flex-grow: 1;
+
+          .votes {
+            background: $background-color;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 14px;
+            font-weight: bold;
+          }
+
+          div {
+            background: #ddd;
+            padding: 3px 8px;
+            border-radius: $border-radius;
+            font-size: 12px;
+          }
+        }
+
+
+      }
+    }
+
+    .today {
+      grid-area: today;
+      background: $white;
+      padding: 15px;
+      margin-bottom: 15px;
+      box-shadow: $shadow;
+
+      h2 {
+        margin-bottom: 10px;
+      }
+
+      div {
+        display: flex;
+        align-items: center;
+        padding: 10px 0;
+        border-bottom: 1px solid #eee;
+
+        .icon {
+          font-size: 24px;
+          margin-right: 15px;
+        }
+
+        .info {
+          flex-grow: 1;
+
+          div {
+            background: #ddd;
+            padding: 3px 8px;
+            border-radius: $border-radius;
+            font-size: 12px;
+          }
+        }
+
+        .votes {
+          font-size: 16px;
+          color: $primary-color;
+        }
+      }
+    }
+
+    // Sidebar
+    .upcoming {
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+      background: $white;
+      right: 0;
+      top: 70px;
+      box-shadow: $shadow;
+
+      h3 {
+        margin-bottom: 10px;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+
+        li {
+          margin-bottom: 8px;
+        }
+      }
+    }
+  }
+}
